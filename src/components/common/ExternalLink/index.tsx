@@ -1,11 +1,7 @@
-import { HTMLProps } from "react"
-import style from './index.module.css'
+import { HTMLProps, PropsWithChildren } from "react"
 
-interface ExternallinkProps extends HTMLProps<HTMLAnchorElement> {
-	children: React.ReactNode
-}
-export const ExternalLink = ({ children, className, ...props }: ExternallinkProps) => {
+export const ExternalLink = ({ children, ...props }: PropsWithChildren<HTMLProps<HTMLAnchorElement>>) => {
   return (
-	<a target="_blank" className={`${style.link} ${className}`} {...props}>{children}</a>
+	<a target="_blank" {...props}>{children}</a>
   )
 }
