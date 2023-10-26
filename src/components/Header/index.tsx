@@ -37,7 +37,7 @@ const Header = () => {
           </Box>
         </Container>
       </Box>
-      <Box className={`w-full py-3 ${COLORS.primary.bg[100]}`}>
+      <Box className={`w-full py-3 ${COLORS.primary.bg.gradient}`}>
         <Container>
           <Box className='w-full justify-between'>
             <Link href="/">
